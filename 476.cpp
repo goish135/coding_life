@@ -4,8 +4,8 @@
 //double pp[max][max]; // max case runtime error 
 int main()
 {
-	freopen("476.in.txt","r",stdin);
-	freopen("476.out.txt","w",stdout);
+	//freopen("476.in.txt","r",stdin);
+	//freopen("476.out.txt","w",stdout);
 	
 	char ch ;
 	double a,b,c,d;
