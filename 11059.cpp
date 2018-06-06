@@ -1,38 +1,43 @@
 #include<stdio.h>
+#include<stdlib.h> 
+#include<string.h>
+
 int main()
 {
-	int in;
-	int tc = 1;
-	while(scanf("%d",&in)==1)
+	//freopen("11509.in.txt","r",stdin);
+	//freopen("11509.out.txt","w",stdout);
+	
+	int n ;
+	int ce = 1; 
+	while(scanf("%d",&n)!=EOF)
 	{
-		int n;
-		long long int p=1;
-		long long int max =0;
-		int A[in];
-		int i = 0;
-		int temp = in;
-		while(in--)
+		int A[n];
+		for(int i=0;i<n;i++)
 		{
-			scanf("%d",&n);
-			A[i]=n;
-			i++;
-			//p = p*n;
-			//if(p>max) max=p;
+			scanf("%d",&A[i]);
 		}
-		for(int k=0;k<temp;k++)
-		{
-			p = A[k];
-			//printf("p = %d\n",A[k]);
-			for(int j=k+1;j<temp;j++)
-			{
-				p=p*A[j];
-				if(p>max) max = p;
-			}	
-		}
-		printf("Case #%d: The maximum product is %lld.\n\n",tc,max);
-		tc++;
-	}
-	return 0;
-}			
-			
 		
+		long long int ans=0;
+		long long int temp;
+		for(int i=0;i<n;i++)
+		{
+			temp = A[i];
+			if(temp>ans)
+			{
+				ans = temp;
+			}
+			
+			for(int j=i+1;j<n;j++)
+			{
+				temp = temp*A[j];
+				if(temp>ans)
+				{
+					ans = temp;
+				}
+			}
+	
+		}
+		printf("Case #%d: The maximum product is %lld.\n\n",ce++,ans);
+	}
+	return 0;	
+} 
