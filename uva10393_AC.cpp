@@ -24,7 +24,7 @@ bool possible(string strstr)
 		{
 			if(strstr[i]==str[j])
 			{
-				flag = 1; // §ä¨ì¤F 
+				flag = 1; // æ‰¾åˆ°å•¦
 				break;
 			}
 		}
